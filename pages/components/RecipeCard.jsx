@@ -28,7 +28,7 @@ function parseQuantity(quantity) {
 export default function RecipeCard({ recipe }) {
   // prettier-ignore
   // eslint-disable-next-line no-unused-vars, prettier/prettier
-  const {id, name, servings, ingredients, time, description, appliance, ustensils} = recipe
+  const {id, name, servings, ingredients, time, description, appliance, ustensils} = recipe || {}
   return (
     <article className={styles.recipe}>
       <section>
