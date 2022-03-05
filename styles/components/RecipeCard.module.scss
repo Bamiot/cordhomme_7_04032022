@@ -1,0 +1,27 @@
+@import '../sass';
+
+.recipe {
+  width: 380px;
+  height: 360px;
+  background-color: $gray;
+  border-radius: $border-radius;
+
+  section {
+    padding: $margin;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    .header {
+      grid-area: 1 / 1 / 2 / 3;
+      @include flex(row);
+    }
+    ul {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+    p {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+  }
+}

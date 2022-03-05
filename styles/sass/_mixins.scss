@@ -1,0 +1,31 @@
+@import './variables';
+
+@mixin mobile {
+  @media (max-width: #{$mobile-breakpoint - 1}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $mobile-breakpoint) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @media (min-width: $large-breakpoint) {
+    @content;
+  }
+}
+
+@mixin flex($direction: column, $align: center, $justify: center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin square($size: 100%) {
+  width: $size;
+  height: $size;
+}

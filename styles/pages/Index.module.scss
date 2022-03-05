@@ -1,5 +1,23 @@
+@import '../sass';
+
+.container {
+}
+
 .header {
+  @include flex(column);
+  figure {
+    position: relative;
+    margin-top: $margin;
+    display: block;
+  }
 }
 
 .main {
+  ul {
+    @include flex(row);
+    flex-wrap: wrap;
+    li {
+      margin: 25px 25px;
+    }
+  }
 }
