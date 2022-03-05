@@ -13,10 +13,10 @@
 }
 
 .main {
-  ul {
+  ul.recipes {
     @include flex(row);
     flex-wrap: wrap;
-    li {
+    li.recipe {
       margin: 25px 25px;
     }
   }

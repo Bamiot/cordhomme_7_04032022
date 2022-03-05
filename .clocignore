@@ -1,0 +1,12 @@
+.git
+.next
+.vscode
+data
+node_modules
+.clocignore
+.eslintrc.json
+.gitignore
+.prettierrc
+next-config.js
+package.json
+package-lock.json

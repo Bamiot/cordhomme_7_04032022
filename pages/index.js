@@ -32,9 +32,9 @@ export default function Home() {
         />
       </header>
       <main className={styles.main}>
-        <ul>
+        <ul className={styles.recipes}>
           {recipes.map((recipe, i) => (
-            <li key={i}>
+            <li key={i} className={styles.recipe}>
               <RecipeCard recipe={recipe} />
             </li>
           ))}

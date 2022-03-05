@@ -1,27 +1,61 @@
 @import '../sass';
 
 .recipe {
+  position: relative;
   width: 380px;
   height: 360px;
   background-color: $gray;
   border-radius: $border-radius;
 
   section {
+    @include square(100%);
     padding: $margin;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    height: calc(50% + $margin);
+    position: absolute;
+    bottom: 0;
+    background-color: $light-gray;
+    border-radius: 0 0 $border-radius $border-radius;
     .header {
-      grid-area: 1 / 1 / 2 / 3;
-      @include flex(row);
+      width: 100%;
+      @include flex(row, space-between, flex-start);
+      font-size: 18px;
+      margin-bottom: $margin;
+      & > * {
+        font-size: inherit;
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 250px;
+      }
+      p {
+        font-size: inherit;
+        font-weight: 700;
+        @include flex(row);
+        svg {
+          @include square(20px);
+        }
+      }
     }
-    ul {
-      grid-area: 2 / 1 / 3 / 2;
-    }
-    p {
-      grid-area: 2 / 2 / 3 / 3;
+    .content {
+      @include flex(row, center, flex-start);
+      height: calc(100% - #{$margin * 2});
+      position: relative;
+      ul {
+        margin-right: $padding;
+      }
+      p {
+        margin-left: $padding;
+      }
+      & > * {
+        display: block;
+        width: 50%;
+        height: 100%;
+        font-size: 12px;
+        line-height: 15px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
     }
   }
 }

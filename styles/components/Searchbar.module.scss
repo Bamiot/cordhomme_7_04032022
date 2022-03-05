@@ -15,8 +15,5 @@ form.searchbar {
   button {
     cursor: pointer;
     @include square(32px);
-    svg {
-      @include square(100%);
-    }
   }
 }
