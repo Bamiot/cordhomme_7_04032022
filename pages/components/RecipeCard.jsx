@@ -41,7 +41,7 @@ export default function RecipeCard({ recipe }) {
         </div>
         <div className={styles.content}>
           <ul>
-            {ingredients.map((ing, i) => (
+            {ingredients?.map((ing, i) => (
               <li key={i}>
                 <b>{ing.ingredient}</b>
                 {ing.quantity && `: ${parseQuantity(ing.quantity)}`}
