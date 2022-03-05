@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from '../../styles/components/Searchbar.module.scss'
-import { SearchIc } from './Icons'
+import SearchIc from './Icons/SearchIc'
 
 export default function Searchbar({ onSubmit }) {
   const [searchQuery, setSearchQuery] = useState('')
