@@ -1,5 +1,5 @@
 import styles from '../../styles/components/RecipeCard.module.scss'
-import TimeIc from './Icons/TimeIc'
+import TimeIc from './icons/TimeIc'
 
 function parseUnit(unit) {
   const unitMap = {
