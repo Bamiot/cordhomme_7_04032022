@@ -130,8 +130,6 @@ export default function Home() {
     tags
   )
 
-  console.log(filteredRecipes)
-
   return (
     <div className={styles.container}>
       <Head>
