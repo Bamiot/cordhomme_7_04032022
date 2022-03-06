@@ -1,4 +1,4 @@
-@import './variables';
+@import './variables.module';
 
 @mixin mobile {
   @media (max-width: #{$mobile-breakpoint - 1}) {
@@ -18,11 +18,17 @@
   }
 }
 
-@mixin flex($direction: column, $justify: center, $align: center) {
+@mixin flex(
+  $direction: column,
+  $justify: center,
+  $align: center,
+  $wrap: nowrap
+) {
   display: flex;
   flex-direction: $direction;
   align-items: $align;
   justify-content: $justify;
+  flex-wrap: $wrap;
 }
 
 @mixin square($size: 100%) {

@@ -17,7 +17,7 @@ $dark-blue: #1c1c9c;
 /* theme color */
 $primary-color: $orange;
 $secondary-color: $blue;
-$tertiary-color: $green;
+$ternary-color: $green;
 
 $background-color: $white;
 $text-color: $black;
@@ -29,3 +29,9 @@ $large-breakpoint: 1320px;
 $margin: 20px;
 $padding: 10px;
 $border-radius: 5px;
+
+:export {
+  primaryColor: $primary-color;
+  secondaryColor: $secondary-color;
+  ternaryColor: $ternary-color;
+}

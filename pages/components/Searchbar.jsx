@@ -2,8 +2,14 @@ import { useState } from 'react'
 import styles from '../../styles/components/Searchbar.module.scss'
 import SearchIc from './icons/SearchIc'
 
-export default function Searchbar({ onSubmit }) {
+export default function Searchbar({ onSubmit, onChange }) {
   const [searchQuery, setSearchQuery] = useState('')
+
+  function setQuery(q) {
+    setSearchQuery(q)
+    onChange(q)
+  }
+
   return (
     <form
       className={styles.searchbar}
@@ -14,7 +20,7 @@ export default function Searchbar({ onSubmit }) {
     >
       <input
         type="text"
-        onChange={(e) => setSearchQuery(e.target.value)}
+        onChange={(e) => setQuery(e.target.value)}
         value={searchQuery}
         placeholder="Rechercher une recette"
       />

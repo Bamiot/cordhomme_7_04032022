@@ -13,6 +13,40 @@
 }
 
 .main {
+  .search {
+    .tags {
+      @include flex(row, flex-start, center, wrap);
+      margin: 0 $margin;
+      li {
+        font-size: 14px;
+        font-weight: 700;
+        color: $white;
+        margin: #{$margin / 4} #{$margin / 4} 0 0;
+        padding: $padding #{$padding * 2};
+        @include flex(row);
+        border-radius: $border-radius;
+        svg {
+          cursor: pointer;
+          margin-left: $padding;
+          @include square(20px);
+        }
+        &.ingredients {
+          background-color: $secondary-color;
+        }
+        &.appliance {
+          background-color: $ternary-color;
+        }
+        &.ustensils {
+          background-color: $primary-color;
+        }
+      }
+    }
+    .tagSearchers {
+      @include flex(row, flex-start, flex-start);
+      margin: $padding;
+      height: 100px;
+    }
+  }
   ul.recipes {
     @include flex(row);
     flex-wrap: wrap;

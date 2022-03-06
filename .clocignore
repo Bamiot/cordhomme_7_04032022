@@ -2,6 +2,7 @@
 .next
 .vscode
 data
+investigation
 node_modules
 .clocignore
 .eslintrc.json
