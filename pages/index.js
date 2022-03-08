@@ -170,7 +170,7 @@ export default function Home() {
           </ul>
           <div className={styles.tagSearchers}>
             <SearchTag
-              label="Ingredients"
+              label="Ingrédients"
               color={cssVar.secondaryColor}
               dataSet={ingredients.filter(
                 (e) => !tags.map((t) => t.name).includes(e)
