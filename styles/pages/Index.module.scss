@@ -5,7 +5,7 @@
 
 .header {
   @include flex(column);
-  figure {
+  h1 {
     position: relative;
     margin-top: $margin;
     display: block;

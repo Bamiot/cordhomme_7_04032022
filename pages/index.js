@@ -137,15 +137,13 @@ export default function Home() {
       </Head>
       <header className={styles.header}>
         <h1>
-          <figure>
-            <Image
-              src="/logo.png"
-              alt="Les petits plats"
-              layout="intrinsic"
-              height="100px"
-              width="300px"
-            />
-          </figure>
+          <Image
+            src="/logo.png"
+            alt="Les petits plats"
+            layout="intrinsic"
+            height="100px"
+            width="300px"
+          />
         </h1>
       </header>
       <main className={styles.main}>

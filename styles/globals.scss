@@ -50,8 +50,6 @@ li {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  scrollbar-width: 0.1rem; /*doesn't work*/
-  scrollbar-color: darkgray rgba(0, 0, 0, 0.3); /*doesn't work*/
 }
 *::-webkit-scrollbar {
   width: 0.1rem;
