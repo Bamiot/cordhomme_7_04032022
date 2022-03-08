@@ -190,7 +190,7 @@ export default function Home() {
               }}
             />
             <SearchTag
-              label="Ustensils"
+              label="Ustensiles"
               color={cssVar.primaryColor}
               dataSet={ustensils.filter(
                 (e) => !tags.map((t) => t.name).includes(e)
