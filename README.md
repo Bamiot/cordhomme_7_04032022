@@ -1,5 +1,5 @@
 - [deployement](https://cordhomme-7-04032022.vercel.app/)
-- [Investigation Sheet](investigation/Fiche%20d'inverstigation%20de%20fonctionnalité%20#2.pdf)
+- [Investigation Sheet](https://github.com/Bamiot/cordhomme_7_04032022/blob/master/Fiche%20d'inverstigation%20de%20fonctionnalit%C3%A9%20%232.pdf)
 
 # Installation
 
