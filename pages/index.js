@@ -66,7 +66,9 @@ const ustensils = recipes
   .map((ustensil) => ustensil.capitalize())
   .sortAlphaAndRemoveDuplicates()
 
-function filterRecipesByQuery(recipes, query) {
+const filterRecipesByQuery = filterRecipesByQueryHybrid
+
+function filterRecipesByQueryHybrid(recipes, query) {
   const results = []
   for (const recipe of recipes) {
     let ingredients = ''
@@ -75,6 +77,38 @@ function filterRecipesByQuery(recipes, query) {
     if (
       recipe.name.toLowerCase().includes(query) ||
       recipe.description.toLowerCase().includes(query) ||
+      ingredients.includes(query)
+    )
+      results.push(recipe)
+  }
+  return results
+}
+
+// eslint-disable-next-line no-unused-vars
+const filterRecipesByQueryFonctional = (recipes, query) =>
+  recipes.filter(
+    (recipe) =>
+      recipe.name.toLocaleLowerCase().includes(query) ||
+      recipe.description.toLocaleLowerCase().includes(query) ||
+      recipe.ingredients
+        .reduce((prev, curr) => prev.concat(curr.ingredient), [])
+        .join(' ')
+        .toLocaleLowerCase()
+        .includes(query)
+  )
+
+// eslint-disable-next-line no-unused-vars
+function filterRecipesByQueryLoop(recipes, query) {
+  const results = []
+  for (const recipe of recipes) {
+    const name = recipe.name.toLowerCase()
+    const description = recipe.description.toLowerCase()
+    let ingredients = ''
+    for (const ingredient of recipe.ingredients)
+      ingredients += ` ${ingredient.ingredient.toLowerCase()}`
+    if (
+      name.includes(query) ||
+      description.includes(query) ||
       ingredients.includes(query)
     )
       results.push(recipe)
