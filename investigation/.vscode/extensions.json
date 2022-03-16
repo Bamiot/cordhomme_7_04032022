@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "yzhang.markdown-all-in-one",
+    "yzane.markdown-pdf"
+  ]
+}
