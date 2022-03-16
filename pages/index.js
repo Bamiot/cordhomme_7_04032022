@@ -66,17 +66,21 @@ const ustensils = recipes
   .map((ustensil) => ustensil.capitalize())
   .sortAlphaAndRemoveDuplicates()
 
-const filterRecipesByQuery = (recipes, query) =>
-  recipes.filter(
-    (recipe) =>
-      recipe.name.toLocaleLowerCase().includes(query) ||
-      recipe.description.toLocaleLowerCase().includes(query) ||
-      recipe.ingredients
-        .reduce((prev, curr) => prev.concat(curr.ingredient), [])
-        .join(' ')
-        .toLocaleLowerCase()
-        .includes(query)
-  )
+function filterRecipesByQuery(recipes, query) {
+  const results = []
+  for (const recipe of recipes) {
+    let ingredients = ''
+    for (const ingredient of recipe.ingredients)
+      ingredients += ` ${ingredient.ingredient.toLowerCase()}`
+    if (
+      recipe.name.toLowerCase().includes(query) ||
+      recipe.description.toLowerCase().includes(query) ||
+      ingredients.includes(query)
+    )
+      results.push(recipe)
+  }
+  return results
+}
 
 function filterRecipesByTag(recipes, tags) {
   if (tags.length === 0) return recipes
