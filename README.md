@@ -16,9 +16,9 @@ start project with: `npm run dev`
 
 |  Language  | files | blank | comment | code |
 | :--------: | :---: | :---: | :-----: | :--: |
-|    Sass    |   8   |  31   |    3    | 327  |
+|    Sass    |   8   |  31   |    3    | 331  |
 |    JSX     |   9   |  13   |    2    | 249  |
-| JavaScript |   3   |  13   |    2    | 211  |
-|  Markdown  |   1   |   7   |    0    |  22  |
+| JavaScript |   3   |  17   |    4    | 248  |
+|  Markdown  |   1   |   6   |    0    |  18  |
 |    SVG     |   1   |   0   |    0    |  6   |
-|    SUM:    |  22   |  59   |    7    | 804  |
+|    SUM:    |  22   |  67   |    9    | 852  |
