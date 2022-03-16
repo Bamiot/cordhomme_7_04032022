@@ -66,6 +66,12 @@ const ustensils = recipes
   .map((ustensil) => ustensil.capitalize())
   .sortAlphaAndRemoveDuplicates()
 
+function strincludes(str, query) {
+  for (let i = 0; i < str.length; i++)
+    if (str.substring(i, i + query.length).toLowerCase() === query) return true
+  return false
+}
+
 const filterRecipesByQuery = filterRecipesByQueryHybrid
 
 function filterRecipesByQueryHybrid(recipes, query) {
@@ -107,9 +113,9 @@ function filterRecipesByQueryLoop(recipes, query) {
     for (const ingredient of recipe.ingredients)
       ingredients += ` ${ingredient.ingredient.toLowerCase()}`
     if (
-      name.includes(query) ||
-      description.includes(query) ||
-      ingredients.includes(query)
+      strincludes(name, query) ||
+      strincludes(description, query) ||
+      strincludes(ingredients, query)
     )
       results.push(recipe)
   }
