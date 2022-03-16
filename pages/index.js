@@ -69,12 +69,14 @@ const ustensils = recipes
 function filterRecipesByQuery(recipes, query) {
   const results = []
   for (const recipe of recipes) {
+    const name = recipe.name.toLowerCase()
+    const description = recipe.description.toLowerCase()
     let ingredients = ''
     for (const ingredient of recipe.ingredients)
       ingredients += ` ${ingredient.ingredient.toLowerCase()}`
     if (
-      recipe.name.toLowerCase().includes(query) ||
-      recipe.description.toLowerCase().includes(query) ||
+      name.includes(query) ||
+      description.includes(query) ||
       ingredients.includes(query)
     )
       results.push(recipe)
