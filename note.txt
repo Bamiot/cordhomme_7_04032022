@@ -1,4 +1,0 @@
-ANALYSE DU BENCHMARKING, faire un tableau avec plusieur test jsbench avec 3, 4, 5 char 
-mesg de no result 
-flochart FILTER (minimu celui retenue, ou les 3)
-3 branches

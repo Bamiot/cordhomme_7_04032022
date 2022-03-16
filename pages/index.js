@@ -247,6 +247,9 @@ export default function Home() {
               <RecipeCard recipe={recipe} />
             </li>
           ))}
+          {filteredRecipes.length === 0 && (
+            <p className={styles.noresults}>Aucun résultats</p>
+          )}
         </ul>
       </main>
     </div>

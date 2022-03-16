@@ -120,8 +120,50 @@ L'objectif étant la performance, j'ai retenue l'approche "hybrid", qui est de t
 
 ## Annexes
 
-<img id=figure0 src="./benchmark/jsbench.png"/>
-<div align=center>Figure 0 - Benckmark <a href="https://jsben.ch/se1io">JsBench</a></div>
+<table border width=100%>
+  <th>
+    <td colspan=3 align=center><b>dataset x 1</b></td>
+    <td colspan=3 align=center><b>dataset x 1000</b></td>
+  </th>
+  <tr>
+    <td><b>query</b></td>
+    <td><b>"coco"</b></td>
+    <td><b>"tarte"</b></td>
+    <td><b>"noresult"</b></td>
+    <td><b>"coco"</b></td>
+    <td><b>"tarte"</b></td>
+    <td><b>"noresult"</b></td>
+  </tr>
+  <tr>
+    <td><b>Functional</b></td>
+    <td>20699</td>
+    <td>29709</td>
+    <td>26643</td>
+    <td>32</td>
+    <td>31</td>
+    <td>22</td>
+  </tr>
+  <tr>
+    <td><b>Loop</b></td>
+    <td>3935</td>
+    <td>7313</td>
+    <td>6073</td>
+    <td>9</td>
+    <td>8</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td><b>Hybrid</b></td>
+    <td>55751</td>
+    <td>80104</td>
+    <td>77884</td>
+    <td>89</td>
+    <td>88</td>
+    <td>69</td>
+  </tr>
+</table>
+
+<div align=center>Figure 0 - Benckmark <a href="https://jsben.ch/mkMMQ">JsBench</a></div>
 
 <br>
 <br>
@@ -160,7 +202,20 @@ L'objectif étant la performance, j'ai retenue l'approche "hybrid", qui est de t
 <br>
 <br>
 
-<div align=center><img id=figure4 src="./flowchart_loop.png"></div>
+<div align=center><img id=figure4 src="./flowchart.png"></div>
 <div align=center>Figure 4 - Flowchart</div>
 
-<style></style>
+<div class=page>
+
+<table width=100%>
+  <td width=140><img src="logo.png" alt="Les petits plats"/></td>
+  <td align=right>Fiche d'investigation fonctionnalité #2</td>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+
+<div align=center><img id=figure41 src="./flowchart_loop.png"></div>
+<div align=center>Figure 4.1 - Flowchart (loop)</div>
