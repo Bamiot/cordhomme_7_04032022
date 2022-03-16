@@ -204,18 +204,3 @@ L'objectif étant la performance, j'ai retenue l'approche "hybrid", qui est de t
 
 <div align=center><img id=figure4 src="./flowchart.png"></div>
 <div align=center>Figure 4 - Flowchart</div>
-
-<div class=page>
-
-<table width=100%>
-  <td width=140><img src="logo.png" alt="Les petits plats"/></td>
-  <td align=right>Fiche d'investigation fonctionnalité #2</td>
-</table>
-
-<br>
-<br>
-<br>
-<br>
-
-<div align=center><img id=figure41 src="./flowchart_loop.png"></div>
-<div align=center>Figure 4.1 - Flowchart (loop)</div>
