@@ -4,6 +4,8 @@
   - [hybrid implementation](https://cordhomme-7-04032022-jkiso2vfi-bamiot.vercel.app/)
 - [Investigation Sheet](https://github.com/Bamiot/cordhomme_7_04032022/blob/master/Fiche%20d'inverstigation%20de%20fonctionnalit%C3%A9%20%232.pdf)
 
+la branche master utilise l'implementation hybrid.
+
 # Installation
 
 before start project, install package with: `npm i`
